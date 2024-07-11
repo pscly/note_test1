@@ -9,3 +9,4 @@ jobs:
       - run: echo "test1"
       - run: ls -al
       - run: echo "bb>a.txt"
+      - run: echo "bb" >a.txt
