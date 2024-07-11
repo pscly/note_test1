@@ -11,4 +11,5 @@ jobs:
       - run: echo "bb>a.txt"
       - run: echo "bb" >a.txt
       - run: pwd
-      - run: cp a.txt /root/mnt2/
+      - run: pip list
+      - run: npm --version
