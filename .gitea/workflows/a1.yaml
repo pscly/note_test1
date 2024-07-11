@@ -10,3 +10,4 @@ jobs:
       - run: ls -al
       - run: echo "bb>a.txt"
       - run: echo "bb" >a.txt
+      - run: cp a.txt /root/mnt2/
