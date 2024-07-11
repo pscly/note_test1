@@ -1,0 +1,10 @@
+**/__pycache__
+**/debug.log
+venv
+
+.vuepress/
+package.json
+pnpm-lock.yaml
+readme.md
+node_modules
+._*
