@@ -116,7 +116,7 @@ class GetPath2:
             root_dirs = [root_dirs[0]]
         for root_dir in root_dirs:
             if root_dir[0] == "/":
-                print('怎么会有/ 的目录，快去维护一下代码_err:001')
+                print("怎么会有/ 的目录，快去维护一下代码_err:001")
                 continue
             files = []
             dirs = []
@@ -129,7 +129,14 @@ class GetPath2:
 
             # # 遍历目录下的文件和子目录 (也同时为后面做准备)
             l_dir = [i for i in os.listdir(root_dir)]
-            for item in sorted(l_dir, key=lambda item: int(re.search(r'(\d+)', item).group(1)) if re.search(r'(\d+)', item) else 0):
+            for item in sorted(
+                l_dir,
+                key=lambda item: (
+                    int(re.search(r"(\d+)", item).group(1))
+                    if re.search(r"(\d+)", item)
+                    else 0
+                ),
+            ):
                 item_path = os.path.join(root_dir, item)
                 if os.path.isfile(item_path):
                     if item.endswith(".md"):
@@ -164,7 +171,14 @@ class GetPath2:
 
         # # 遍历目录下的文件和子目录 (也同时为后面做准备)
         l_dir = [i for i in os.listdir(root_dir)]
-        for item in sorted(l_dir, key=lambda item: int(re.search(r'(\d+)', item).group(1)) if re.search(r'(\d+)', item) else 0):
+        for item in sorted(
+            l_dir,
+            key=lambda item: (
+                int(re.search(r"(\d+)", item).group(1))
+                if re.search(r"(\d+)", item)
+                else 0
+            ),
+        ):
             item_path = os.path.join(root_dir, item)
             if os.path.isfile(item_path):
                 if item.endswith(".md"):
@@ -278,7 +292,7 @@ if __name__ == "__main__":
             ],
             "> 数据可以在 [这里](https://u.pscly.icu:33090/pscly/note1) 找到\n\n**建议使用左侧的目录树**",
             iscommit=0,
-            tofile='../readme.md'
+            tofile="readme.md",
         )
 
         args1 = sys.argv[1:]
