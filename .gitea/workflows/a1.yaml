@@ -13,3 +13,4 @@ jobs:
       - run: pwd
       - run: pip list
       - run: npm --version
+      - run: echo "Hello, ${{ gitea.actor }}"
